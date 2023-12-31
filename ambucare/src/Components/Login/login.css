@@ -1,0 +1,83 @@
+.card{
+    width:100%;
+    height:700px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom left ,purple,pink);
+}
+.login{
+    border-radius: 15px;
+    width:350px;
+    height:60%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    
+}
+.write>p{
+    border-radius: 15px 15px 0px 0px;    
+    font-size: 35px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: linear-gradient(to bottom left,purple,pink);
+    padding-left: 8px;
+}
+.userid{
+    margin-left: 4px;
+    margin-top: 5px;
+    padding:8px;
+    display:flex;
+    flex-direction: column;
+    height: 15%;
+    width:70%;
+  
+
+}
+.userid>label{
+    color: grey;
+    margin-bottom:5px;
+    font-size: 16px;
+}
+.userid>input{
+    border-radius: 2px grey;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-left:2px;
+    padding-bottom:3px; 
+
+}
+.pass>label{
+    color: grey;
+    margin-bottom:5px;
+    font-size: 16px;
+}
+.pass>input{
+    border-radius: 2px grey;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-left:2px;
+    padding-bottom:3px;
+}
+.pass{
+    margin-left: 4px;
+    margin-top: 5px;
+    padding:8px;
+    display:flex;
+    flex-direction: column;
+    height:20%;
+    width:70%;
+}
+.button{
+    margin-left: 14px;
+    margin-top: 5px;
+    color: white;
+    
+}
+.button>button{
+    background-image: linear-gradient(to bottom left,purple,pink);
+    padding:8px 15px 8px 20px;
+    color: white;
+    border: none;
+    border-radius: 7px;
+}
