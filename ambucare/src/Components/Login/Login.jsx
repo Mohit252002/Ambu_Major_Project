@@ -10,17 +10,21 @@ function Login() {
         <p className="log">Login</p>
     </div>
     <div className="userid">
-    <label for="username">User Name/Email</label>
+   
     <input type="text" id="username" placeholder='Email /User Name'/>
+    <label for="username">User Name/Email</label>
+   
+   
     </div>
     <div className="pass">
-    <label htmlFor="password">Password</label>
+   
     <input type="text" id="password"placeholder='Password'/>
+    <label htmlFor="password">Password</label>
     </div>
     <div className="Forgrem Remf">
         <div className="Remember">
-        <input type="checkbox" id="forget" />
-        <label htmlFor="Remember">Remember me</label>
+        <input type="checkbox" id="remb" />
+        <label htmlFor="remb">Remember me</label>
         </div>
         <div className="forget">
         <NavLink to="/forget" className="forgoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"purple":"",};}

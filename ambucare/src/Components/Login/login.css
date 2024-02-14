@@ -29,7 +29,7 @@
     
     padding:5px;
     display:flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     height: 20%;
     width:80%;
@@ -70,21 +70,32 @@
     outline:none;
     width:100%
 }
-input:focus{
+.userid>input:focus{
     border: 3px solid purple;
+   
   }
-  
+.userid>input:focus + label{
+    color:purple;
+}
+
 .pass{
     margin-left: 4px;
   
     padding:5px;
     display:flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     height:20%;
     width:80%;
     justify-content: center;
     flex-wrap: nowrap;
     
+}
+.pass>input:focus{
+    border:3px solid purple;
+
+}
+.pass>input:focus + label{
+    color:purple;
 }
 .button{
     margin-left: 12px;
@@ -111,4 +122,7 @@ input:focus{
 }
 .forgoption{
     text-decoration: none;
+}
+.Remember>input{
+ color: purple;
 }
