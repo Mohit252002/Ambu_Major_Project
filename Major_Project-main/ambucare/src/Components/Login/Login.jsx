@@ -1,15 +1,13 @@
 import React from 'react'
 import './login.css'
 import { NavLink } from 'react-router-dom';
-function Login(props) {
-
-  return(props.trigger) ? (
-   
+function Login() {
+  return (
+    <>
     <div className="card">
     <div className="login">
     <div className="write">
         <p className="log">Login</p>
-        <p className="closebutton">  <button onClick={()=>props.setTrigger(false)}>X</button></p>
     </div>
     <div className="userid">
    
@@ -38,13 +36,7 @@ function Login(props) {
     </div>
     </div>
     </div>
-     
-  
-    ):
-    <>
-   
-  </>
-   
+    </>  )
 }
 
 export default Login;

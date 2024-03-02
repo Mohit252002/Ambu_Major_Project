@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {Link,NavLink} from 'react-router-dom'
-// import Home from '../Home/Home';
-import Login from '../Login/Login'
-import './head.css'
+import './Head.css'
 function Header() {
-  const[Visible,setVisible]=useState(false);
   return (
     <>
     <div className="navbar">
@@ -22,14 +19,8 @@ function Header() {
         }>AboutUs </NavLink></li>
         <li> <NavLink to="/JoinUs" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
         }>JoinUs </NavLink></li>
-        {/* <li> <NavLink to="/Login" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
-        }>Login </NavLink></li> */}
-        <li>
-          <button onClick={()=>setVisible(true)}>Login</button>
-          <Login trigger={Visible} setTrigger={setVisible}>
-           
-          </Login>
-        </li>
+        <li> <NavLink to="/Login" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
+        }>Login/Register </NavLink></li>
         <li> <NavLink to="/Services" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
         }>Services </NavLink></li>
      
