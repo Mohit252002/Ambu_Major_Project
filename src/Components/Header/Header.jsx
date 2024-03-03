@@ -22,18 +22,14 @@ function Header() {
         }>AboutUs </NavLink></li>
         <li> <NavLink to="/JoinUs" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":""};}
         }>JoinUs </NavLink></li>
-<<<<<<< HEAD
-        
-=======
-        {/* <li> <NavLink to="/Login" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
-        }>Login </NavLink></li> */}
+        <li> <NavLink to="/Login" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
+        }>Login </NavLink></li>
         
         <li> <NavLink to="/Services" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
         }>Services </NavLink></li>
 
 <li> <NavLink to="/RegisterUser" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
         }>Register </NavLink></li>
->>>>>>> 086c7efffe587f6d958f4d55f34b309aff17baaf
         <li>
           <button onClick={()=>setVisible(true)}>Login</button>
           <Login trigger={Visible} setTrigger={setVisible}>
