@@ -120,6 +120,7 @@
     color: white;
     border: none;
     border-radius: 7px;
+    width:87%;
 }
 .Remember{
     display:flex;
@@ -141,15 +142,25 @@
     margin-right: 4px;
     margin-bottom: 5px;
 }
+
 .closebutton>button{
     background-image: linear-gradient(to bottom left,purple,pink);
     padding:10px 20px 15px 18px;
     border: black 2px solid;
-    border-radius: 40%;
-    
+    border-radius: 100%;
     height: 100%;
     color: black;
     outline: none;
-    
-    
+       
+}
+.closebutton>button:hover{
+   background-image: linear-gradient(to bottom left,red,pink);
+
+}
+
+
+#remb{
+    width:20px;
+    height:15px;
+    margin-right: 2px;
 }

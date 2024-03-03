@@ -11,7 +11,8 @@ export default function JoinUs() {
     gmail: '',
     ambulanceNumber: '',
     ambulanceType: '',
-    organizationAffiliated: ''
+    organizationAffiliated: '',
+    Password:''
   });
 
   const handleChange = (e) => {
@@ -80,7 +81,16 @@ export default function JoinUs() {
         <label>Organization Ambulance Affiliated With:</label>
         <input type="text" name="organizationAffiliated" value={formData.organizationAffiliated} onChange={handleChange} />
       </div>
-      <button type="submit">Submit</button>
+      <div className="form-group">
+        <label>Password:</label>
+        <input type="text" name="organizationAffiliated" value={formData.organizationAffiliated} onChange={handleChange} />
+      </div>
+      <div className="form-group">
+        <label>Confirm Password</label>
+        <input type="text" name="organizationAffiliated" value={formData.organizationAffiliated} onChange={handleChange} />
+      </div>
+
+      <button id='button' type="submit">Submit</button>
     </form>
       </div>
 

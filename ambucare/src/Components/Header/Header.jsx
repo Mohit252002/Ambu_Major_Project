@@ -27,6 +27,9 @@ function Header() {
         
         <li> <NavLink to="/Services" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
         }>Services </NavLink></li>
+
+<li> <NavLink to="/RegisterUser" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
+        }>Register </NavLink></li>
         <li>
           <button onClick={()=>setVisible(true)}>Login</button>
           <Login trigger={Visible} setTrigger={setVisible}>
