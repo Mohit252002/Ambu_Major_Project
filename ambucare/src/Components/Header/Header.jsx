@@ -14,16 +14,15 @@ function Header() {
     <div className="options">
       
         <li >
-          <NavLink to="/" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
+          <NavLink to="/" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",};}
         }>Home </NavLink>
         
         </li>
-        <li> <NavLink to="aboutUs"  className="navoption"style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
+        <li> <NavLink to="aboutUs"  className="navoption"style={({isActive})=>{return{ fontWeight:isActive?"bold":""};}
         }>AboutUs </NavLink></li>
-        <li> <NavLink to="/JoinUs" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
+        <li> <NavLink to="/JoinUs" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":""};}
         }>JoinUs </NavLink></li>
-        {/* <li> <NavLink to="/Login" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
-        }>Login </NavLink></li> */}
+        
         <li>
           <button onClick={()=>setVisible(true)}>Login</button>
           <Login trigger={Visible} setTrigger={setVisible}>
