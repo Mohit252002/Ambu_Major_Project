@@ -24,14 +24,15 @@ function Header() {
         }>JoinUs </NavLink></li>
         {/* <li> <NavLink to="/Login" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
         }>Login </NavLink></li> */}
+        
+        <li> <NavLink to="/Services" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
+        }>Services </NavLink></li>
         <li>
           <button onClick={()=>setVisible(true)}>Login</button>
           <Login trigger={Visible} setTrigger={setVisible}>
            
           </Login>
         </li>
-        <li> <NavLink to="/Services" className="navoption" style={({isActive})=>{return{ fontWeight:isActive?"bold":"",color:isActive?"#C70039":"",};}
-        }>Services </NavLink></li>
      
     </div>
     </div>
