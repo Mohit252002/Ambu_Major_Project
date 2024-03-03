@@ -5,6 +5,8 @@ import Layout from './Layout'
 import About from './Components/About/About'
 // import Login from './Components/Login/Login'
 import Forget from './Components/Forget/Forget'
+import JoinUs from './Components/JoinUs/JoinUs'
+import RegisterUser from './Components/RegisterUser/RegisterUser' 
 import { Route,RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 
 const router=createBrowserRouter(
@@ -14,7 +16,10 @@ const router=createBrowserRouter(
       <Route path='about/' element={<About/>}/>
       {/* <Route path="Login/" element={<Login/>}/> */}
       <Route path="forget/" element={<Forget/>}/>
+      <Route path="Joinus/" element={<JoinUs/>}/>
+      <Route path="RegisterUser/" element={<RegisterUser/>}/>
     </Route>
+
   )
 )
 ReactDOM.createRoot(document.getElementById('root')).render(
