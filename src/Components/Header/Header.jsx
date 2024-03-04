@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import {Link,NavLink} from 'react-router-dom'
 // import Home from '../Home/Home';
 import Login from '../Login/Login'
-import './head.css'
+import './Head.css'
 function Header() {
   const[Visible,setVisible]=useState(false);
   return (
