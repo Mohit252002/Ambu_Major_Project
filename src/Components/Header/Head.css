@@ -43,5 +43,34 @@ height:80%;
 
 }
 .options .navoption:hover{
-    color: #310fab;
+    color:#3b3335;
+}
+.Driverl{
+    background-color:#008CBA;; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:10px 0px 0px 10px;
+    margin-right: -20px;
+}
+.Userl{
+    background-color:#04AA6D;;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 16px;
+}
+.Userl:hover{
+    padding:7px 12px;
+}
+.Driverl:hover{
+    padding:7px 12px;
 }
