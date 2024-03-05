@@ -4,6 +4,7 @@ import Home from './Components/Home/Home'
 import Layout from './Layout'
 import About from './Components/About/About'
 // import Login from './Components/Login/Login'
+import Services from './Components/Services/Services'
 import Forget from './Components/Forget/Forget'
 import JoinUs from './Components/JoinUs/JoinUs'
 import RegisterUser from './Components/RegisterUser/RegisterUser' 
@@ -18,6 +19,7 @@ const router=createBrowserRouter(
       <Route path="forget/" element={<Forget/>}/>
       <Route path="Joinus/" element={<JoinUs/>}/>
       <Route path="RegisterUser/" element={<RegisterUser/>}/>
+      <Route path="Services/" element={<Services/>}/>
     </Route>
 
   )

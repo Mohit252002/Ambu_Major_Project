@@ -25,7 +25,7 @@ export default function RegisterUser() {
   };
   return (
    
-    <div className="container">
+    <div className="contain">
     <div className="centered">
       <div className="signup-container">
         <h2 className="title">Sign Up</h2>
