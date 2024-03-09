@@ -6,9 +6,9 @@ export default function RegisterUser() {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
-    phoneNumber: '',
+    phoneNo: '',
+    dob:'',
     password: '',
-    confirmPassword: ''
   });
 
   const handleChange = (e) => {
@@ -23,7 +23,7 @@ export default function RegisterUser() {
     e.preventDefault();
    try{
     alert("submitted")
-    await axios.post("http://localhost:5000/RegisterUser",{
+    await axios.post("http://localhost:8080/RegisterUser/save",{
       formData
     })
    }
@@ -49,6 +49,10 @@ export default function RegisterUser() {
           <div className="form-group">
             <label htmlFor="phoneNumber" className="label">Phone Number</label>
             <input type="tel" id="phoneNumber" name="phoneNumber" className="input" value={formData.phoneNumber} onChange={handleChange} required />
+          </div>
+          <div className="form-group">
+            <label htmlFor="dob" className="label">Date Of Birth</label>
+            <input type="date" id="dateid" name="dob" className="input" value={formData.date} onChange={handleChange} required />
           </div>
           <div className="form-group">
             <label htmlFor="password" className="label">Password</label>

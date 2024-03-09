@@ -10,4 +10,5 @@ function failed(){
 }
 srcBtn.addEventListener('click',async()=>{
     navigator.geolocation.getCurrentPosition(gotLocation,failed);
+
 })
