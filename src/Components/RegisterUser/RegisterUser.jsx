@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import './Register.css'
+import axios from 'axios'
 export default function RegisterUser() {
   const [formData, setFormData] = useState({
     username: '',
@@ -16,12 +17,19 @@ export default function RegisterUser() {
       ...prevState,
       [name]: value
     }));
-  };
+  };         
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+   try{
+    alert("submitted")
+    await axios.post("http://localhost:5000/RegisterUser",{
+      formData
+    })
+   }
+   catch(e){
+    console.log(e);
+   }
   };
   return (
    
