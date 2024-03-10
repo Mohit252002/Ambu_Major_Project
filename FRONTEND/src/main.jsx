@@ -9,9 +9,12 @@ import Forget from './Components/Forget/Forget'
 import JoinUs from './Components/JoinUs/JoinUs'
 import RegisterUser from './Components/RegisterUser/RegisterUser' 
 import { Route,RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
+import User from './Components/User/User.jsx'
+import Dashboard from './Components/Dashboard/Dashboard.jsx'
 
 const router=createBrowserRouter(
   createRoutesFromElements(
+    
     <Route path='/' element={<Layout/>}>
       <Route path="" element={<Home/>}/>
       <Route path='about/' element={<About/>}/>
@@ -20,7 +23,11 @@ const router=createBrowserRouter(
       <Route path="Joinus/" element={<JoinUs/>}/>
       <Route path="RegisterUser/" element={<RegisterUser/>}/>
       <Route path="Services/" element={<Services/>}/>
+      <Route path="User/" element={<User/>}>
+        <Route path="dashboard" element={<Dashboard/>}/>
+        </Route>
     </Route>
+   
 
   )
 )

@@ -1,8 +1,49 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './login.css'
 import { NavLink } from 'react-router-dom';
+import { doLogin } from '../../authorization/udLogin';
 function Login(props) {
+  const[loginDetail,setLoginDetail]=useState({
+    email:"",
+    password:""
+  })
 
+  const handleChange=(e,name)=>{
+  
+    let value=e.target.value
+    setLoginDetail({
+      ...loginDetail,
+      [name]:value
+    })
+  }
+
+
+  const handleSubmit=async(e)=>
+  {
+    e.preventDefault();
+    if(loginDetail.email.trim()=='' || loginDetail.password.trim()==''){
+      alert("username or password is requied")
+      return
+
+    }
+    try{
+      
+     const data= await axios.post("http://localhost:8080//user/login",{
+    
+        loginDetail
+      })
+      console.log(data);
+      // save the data to local storage
+      doLogin(data,()=>{
+        console.log("login detail is saved to storage")
+        //redirect to user login page
+      });
+     }
+     catch(e){
+      console.log(e);
+     }
+
+  }
   return(props.trigger) ? (
    
     <div className="card">
@@ -11,18 +52,20 @@ function Login(props) {
         <p className="log">Login</p>
         <p className="closebutton">  <button onClick={()=>props.setTrigger(false)}>X</button></p>
     </div>
+    <form onSubmit={handleSubmit}>
     <div className="userid">
    
-    <input type="text" id="username" placeholder='Email /User Name'/>
-    <label for="username">User Name/Email</label>
+    <input type="email" id="email" value={loginDetail.email} onChange={(e)=>handleChange(e,'email')} placeholder='Email'/>
+    <label htmlFor="email">Email</label>
    
    
     </div>
     <div className="pass">
    
-    <input type="text" id="password"placeholder='Password'/>
+    <input type="password" id="password" value={loginDetail.password} onChange={(e)=>handleChange(e,'password')} placeholder='Password'/>
     <label htmlFor="password">Password</label>
     </div>
+  
     <div className="Forgrem Remf">
         <div className="Remember">
         <input type="checkbox" id="remb" />
@@ -34,8 +77,9 @@ function Login(props) {
         </div>
     </div>
     <div className="button">
-        <button>LogIn</button>
+        <button type="submit">LogIn</button>
     </div>
+    </form>
     </div>
     </div>
      
