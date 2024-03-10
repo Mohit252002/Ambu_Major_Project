@@ -6,7 +6,7 @@ export default function RegisterUser() {
   const [formData, setFormData] = useState({
     username: '',
     email: '',
-    phoneNo: '',
+    phoneNo: 0,
     dob:'',
     password: '',
   });
@@ -22,10 +22,18 @@ export default function RegisterUser() {
   const handleSubmit = async(e) => {
     e.preventDefault();
    try{
-    alert("submitted")
-    await axios.post("http://localhost:8080/RegisterUser/save",{
-      formData
-    })
+    alert("submitted");
+   
+    const url = 'http://localhost:8080/RegisterUser/save'
+    const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+    };
+    fetch(url, requestOptions)
+        .then(response => console.log('Submitted successfully'))
+        .catch(error => console.log('Form submit error', error))
+
    }
    catch(e){
     console.log(e);
@@ -47,8 +55,8 @@ export default function RegisterUser() {
             <input type="email" id="email" name="email" className="input" value={formData.email} onChange={handleChange} required />
           </div>
           <div className="form-group">
-            <label htmlFor="phoneNumber" className="label">Phone Number</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" className="input" value={formData.phoneNumber} onChange={handleChange} required />
+            <label htmlFor="phoneNo" className="label">Phone Number</label>
+            <input type="number" id="phoneNumber" name="phoneNo" className="input" value={formData.phoneNumber} onChange={handleChange} required />
           </div>
           <div className="form-group">
             <label htmlFor="dob" className="label">Date Of Birth</label>
